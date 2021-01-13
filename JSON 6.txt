@@ -1,0 +1,76 @@
+Problem 6:
+var arr= [ [ ['firstName', 'Vasanth'], ['lastName', 'Raja'], ['age', 24], ['role', 'JSWizard'] ], 
+
+        [['firstName', 'Sri'], ['lastName', 'Devi'], ['age', 28], ['role', 'Coder']] ];
+        
+let obj ={};
+let temp =[];
+temp = transformEmployeeData(arr);
+console.log(temp);
+
+
+function transformEmployeeData(arr)
+
+{
+    
+ var transformEmployeeList = [];
+ 
+ obj[arr[0][0][0]] = arr[0][0][1];
+obj[arr[0][1][0]] = arr[0][1][1];
+obj[arr[0][2][0]] = arr[0][2][1];
+obj[arr[0][3][0]] = arr[0][3][1];
+
+//console.log(obj);
+
+transformEmployeeList.push(obj);
+
+obj ={};
+
+obj[arr[1][0][0]] = arr[1][0][1];
+obj[arr[1][1][0]] = arr[1][1][1];
+obj[arr[1][2][0]] = arr[1][2][1];
+obj[arr[1][3][0]] = arr[1][3][1];
+
+//console.log(obj);
+
+transformEmployeeList.push(obj);
+
+
+ //Your code
+// console.log(transformEmployeeList);
+ return transformEmployeeList;
+}
+
+Problem 7:
+Solution :
+
+var expected = {foo: 5, bar: 6};
+var actual = {foo: 5, bar: 6};
+
+assertObjectsEqual(actual,expected,'detects that two objects are equal');
+
+function assertObjectsEqual(actual, expected, testName){
+ // your code here
+let str = JSON.stringify(expected);
+//console.log(str);
+let str1 = JSON.stringify(actual);
+//console.log(stt1);
+
+	if(str===str1)
+	{
+   	 console.log('PASSED');
+	}
+
+	else
+	{
+    	console.log('FAILED');
+	}
+
+
+}//end of function
+
+
+
+
+
+
